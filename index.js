@@ -21,6 +21,9 @@ app.use('/uploads', express.static('uploads'));
 app.use("/api/auth", authRoutes);
 app.use('/api', uploadRoute);
 
+app.get("/", (req, res)=>{
+  app.send('server chal rha h sab mast h')
+})
 
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
